@@ -19,7 +19,7 @@ test('add, edit, delete item flow', async ({ page }) => {
   const itemName = 'test item';
   const updatedItemName = 'updated test item';
 
-  // Navigate to login page
+  // Navigate to the login page
   await loginPage.goto();
 
   // Login
@@ -28,7 +28,7 @@ test('add, edit, delete item flow', async ({ page }) => {
   // Verify dashboard loaded
   await dashboard.expectPageLoaded();
 
-  // Navigate to item list page
+  // Navigate to the item list page
   await dashboard.goToItemListPage();
 
   // Verify item list page loaded
@@ -47,7 +47,7 @@ test('add, edit, delete item flow', async ({ page }) => {
   const items = await itemList.getItems();
   expect(items.length).toBe(0);
 
-  // Go back to dashboard
+  // Go back to the dashboard
   await itemList.goBackToDashboard();
 
   // Logout

@@ -15,6 +15,7 @@ export default defineConfig({
   use: {
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
+    video: 'retain-on-failure'
   },
 
   projects: [
@@ -24,6 +25,8 @@ export default defineConfig({
         ...devices['Desktop Chrome'],
         headless: !env.webdriver_visible,
         channel: 'chrome', // Google Chrome
+        screenshot: 'only-on-failure',
+        video: 'retain-on-failure',
       },
     },
     {
@@ -32,6 +35,8 @@ export default defineConfig({
         ...devices['Desktop Edge'],
         headless: !env.webdriver_visible,
         channel: 'msedge', // Microsoft Edge
+        screenshot: 'only-on-failure',
+        video: 'retain-on-failure',
       },
     },
     {
@@ -39,6 +44,8 @@ export default defineConfig({
       use: {
         ...devices['Desktop Safari'],
         headless: !env.webdriver_visible,
+        screenshot: 'only-on-failure',
+        video: 'retain-on-failure',
       },
     },
   ],

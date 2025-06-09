@@ -36,3 +36,7 @@ coverage/
 
 # TypeScript cache
 *.tsbuildinfo
+/package.json
+/package-lock.json
+/.idea/.gitignore
+/.idea/
